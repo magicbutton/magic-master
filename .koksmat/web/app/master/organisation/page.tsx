@@ -1,7 +1,7 @@
 "use client";
 
 import SearchCountry from "@/app/magic/services/magic-people/country/components/search";
-import { useSQLSelect } from "@/koksmat/usesqlselect";
+import { useSQLSelect } from "@/app/koksmat/usesqlselect";
 
 function RootLevel() {
   const rootLevel = useSQLSelect(

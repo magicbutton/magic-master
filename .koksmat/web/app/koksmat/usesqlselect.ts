@@ -2,7 +2,7 @@
 
 import { useContext, useEffect, useState } from "react";
 
-import { run } from "@/koksmat/magicservices";
+import { run } from "@/app/koksmat/magicservices";
 import { Result } from "./httphelper";
 import { MagicboxContext } from "./magicbox-context";
 

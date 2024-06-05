@@ -1,35 +1,31 @@
-"use client"
+"use client";
 
-import React, { use, useContext, useEffect, useState } from "react"
-import { set } from "date-fns"
+import React, { use, useContext, useEffect, useState } from "react";
+import { set } from "date-fns";
 
-import { Result } from "@/koksmat/httphelper"
-import { useProcess } from "@/koksmat/useprocess"
+import { Result } from "@/app/koksmat/httphelper";
+import { useProcess } from "@/app/koksmat/useprocess";
 
-
-
-import { MessageType } from "../server/MessageType"
-import { Button } from "@/components/ui/button"
-
+import { MessageType } from "../server/MessageType";
+import { Button } from "@/components/ui/button";
 
 interface RunServerProcessProps {
-  cmd: string
-  ran?: boolean
-  setran?: (ran: boolean) => void
-  showDebug?: boolean
-  args: string[]
-  timeout: number
-  channelname: string
-  cwd?: string
-  caption?: string
-  onMessage?: (data: MessageType) => void
-  onData?: (data: string) => void
-  onError?: (errorMessage: string) => void
-  setresult?: (result: Result<string>) => void
+  cmd: string;
+  ran?: boolean;
+  setran?: (ran: boolean) => void;
+  showDebug?: boolean;
+  args: string[];
+  timeout: number;
+  channelname: string;
+  cwd?: string;
+  caption?: string;
+  onMessage?: (data: MessageType) => void;
+  onData?: (data: string) => void;
+  onError?: (errorMessage: string) => void;
+  setresult?: (result: Result<string>) => void;
 }
 
 export default function RunServerProcess(props: RunServerProcessProps) {
-
   const {
     cmd,
     args,
@@ -42,7 +38,7 @@ export default function RunServerProcess(props: RunServerProcessProps) {
     ran,
     setran,
     showDebug,
-  } = props
+  } = props;
   const { isLoading, error, data } = useProcess(
     cmd,
     args,
@@ -53,22 +49,20 @@ export default function RunServerProcess(props: RunServerProcessProps) {
     props.ran,
     props.setran,
     props.setresult
-  )
+  );
 
-  const [showTrace, setshowTrace] = useState(false)
-  const [showCmd, setshowCmd] = useState(false)
-  const [showDebugForThis, setshowDebugForThis] = useState(false)
+  const [showTrace, setshowTrace] = useState(false);
+  const [showCmd, setshowCmd] = useState(false);
+  const [showDebugForThis, setshowDebugForThis] = useState(false);
 
   useEffect(() => {
     if (data && onData) {
-      onData(data)
+      onData(data);
     }
     if (error && onError) {
-      onError(error)
+      onError(error);
     }
-  }, [data, error])
-
-
+  }, [data, error]);
 
   return (
     <div>
@@ -80,7 +74,7 @@ export default function RunServerProcess(props: RunServerProcessProps) {
             <div className="font-bold">Server script: {props.caption}</div>
 
             <div className="grow"></div>
-           
+
             <Button
               variant={"default"}
               onClick={() => setshowTrace(!showTrace)}
@@ -98,7 +92,7 @@ export default function RunServerProcess(props: RunServerProcessProps) {
               <Button
                 variant={"link"}
                 onClick={() => {
-                  if (setran) setran(false)
+                  if (setran) setran(false);
                 }}
               >
                 Run again
@@ -122,7 +116,6 @@ export default function RunServerProcess(props: RunServerProcessProps) {
           )}
         </div>
       )}
-  
     </div>
-  )
+  );
 }

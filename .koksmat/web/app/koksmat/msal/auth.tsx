@@ -9,8 +9,8 @@ import {
   EventType,
   PublicClientApplication,
 } from "@azure/msal-browser";
-import { msalConfig } from "@/koksmat/msal/config";
-import { MagicboxContext } from "@/koksmat/magicbox-context";
+import { msalConfig } from "@/app/koksmat/msal/config";
+import { MagicboxContext } from "@/app/koksmat/magicbox-context";
 import { https } from "../httphelper";
 
 export function MSALWrapper({

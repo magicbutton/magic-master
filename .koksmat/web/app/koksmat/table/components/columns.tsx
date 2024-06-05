@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { ColumnDef } from "@tanstack/react-table"
+import { ColumnDef } from "@tanstack/react-table";
 
-import { Badge } from "@/components/ui/badge"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 
-import { labels, priorities, statuses } from "../data/data"
-import { GenericItem } from "../data/schema"
-import { DataTableColumnHeader } from "@/koksmat/components/data-table-column-header"
-import { DataTableRowActions } from "./data-table-row-actions"
+import { labels, priorities, statuses } from "../data/data";
+import { GenericItem } from "../data/schema";
+import { DataTableColumnHeader } from "@/app/koksmat/components/data-table-column-header";
+import { DataTableRowActions } from "./data-table-row-actions";
 
 export const columns: ColumnDef<GenericItem<any>>[] = [
   {
@@ -16,7 +16,9 @@ export const columns: ColumnDef<GenericItem<any>>[] = [
     header: ({ table }) => (
       <Checkbox
         checked={table.getIsAllPageRowsSelected()}
-        onCheckedChange={(value:any) => table.toggleAllPageRowsSelected(!!value)}
+        onCheckedChange={(value: any) =>
+          table.toggleAllPageRowsSelected(!!value)
+        }
         aria-label="Select all"
         className="translate-y-[2px]"
       />
@@ -24,7 +26,7 @@ export const columns: ColumnDef<GenericItem<any>>[] = [
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
-        onCheckedChange={(value:any) => row.toggleSelected(!!value)}
+        onCheckedChange={(value: any) => row.toggleSelected(!!value)}
         aria-label="Select row"
         className="translate-y-[2px]"
       />
@@ -47,26 +49,25 @@ export const columns: ColumnDef<GenericItem<any>>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Title" />
     ),
-    cell: ({ row }) => <div >{row.original.title}</div>,
+    cell: ({ row }) => <div>{row.original.title}</div>,
     enableSorting: true,
     enableHiding: false,
-  }, {
+  },
+  {
     id: "details",
     accessorKey: "details",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Details" />
     ),
-    cell: ({ row }) => <div >{row.original.details}</div>,
+    cell: ({ row }) => <div>{row.original.details}</div>,
     enableSorting: true,
     enableHiding: true,
   },
 
   {
     id: "actions",
-    cell: ({ row }) => <DataTableRowActions link={row.original.link as string} row={row} />,
+    cell: ({ row }) => (
+      <DataTableRowActions link={row.original.link as string} row={row} />
+    ),
   },
-
-
-
-]
-
+];

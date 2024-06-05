@@ -1,17 +1,18 @@
 "use client";
 
-
-import { MagicboxContext } from "@/koksmat/magicbox-context";
+import { MagicboxContext } from "@/app/koksmat/magicbox-context";
 import Link from "next/link";
 import { useContext } from "react";
 
 export const LoginButton = () => {
   const magicbox = useContext(MagicboxContext);
   return (
-    <button style={{ marginRight: 10 }} onClick={() => {
-      
-      magicbox.signIn(["openid", "User.Read"],"")
-      }}>
+    <button
+      style={{ marginRight: 10 }}
+      onClick={() => {
+        magicbox.signIn(["openid", "User.Read"], "");
+      }}
+    >
       Sign in
     </button>
   );

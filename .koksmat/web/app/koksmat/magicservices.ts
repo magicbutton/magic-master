@@ -1,5 +1,5 @@
 "use server";
-import { Result } from "@/koksmat/httphelper";
+import { Result } from "@/app/koksmat/httphelper";
 import { NatsConnection, connect, StringCodec } from "nats";
 
 export interface MagicRequest {

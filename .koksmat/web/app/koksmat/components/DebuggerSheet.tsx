@@ -9,8 +9,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Debugger from "@/koksmat/components/debugger";
-import { MagicboxContext } from "@/koksmat/magicbox-context";
+import Debugger from "@/app/koksmat/components/debugger";
+import { MagicboxContext } from "@/app/koksmat/magicbox-context";
 import { useContext } from "react";
 
 export default function DebuggerSheet() {
