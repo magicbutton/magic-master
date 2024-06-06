@@ -32,7 +32,7 @@ export function ServiceInspector() {
         setleaving(false);
       }}
       className={`transition duration-150 ease-in-out fixed z-50 flex h-6  items-center flex justify-center rounded-full
-        p-3 font-mono text-xs text-white bottom-1 right-1  ${
+        p-3 font-mono text-xs text-white bottom-1 right-10  ${
           open ? "w-48" : "w-6"
         } transition-all duration-1000`}
     >
