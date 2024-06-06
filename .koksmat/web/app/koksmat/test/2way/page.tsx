@@ -1,6 +1,6 @@
 "use client";
-import Ping from "@/app/magic/components/streams/ping";
-import { StreamSpawnProcess } from "@/app/magic/components/streams/spawn";
+import Ping from "@/app/koksmat/streams/ping";
+import { StreamSpawnProcess } from "@/app/koksmat/streams/spawn";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
