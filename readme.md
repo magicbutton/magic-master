@@ -22,18 +22,8 @@ The architecture of the KOKSMAT framework ensures a clear separation between fro
 - **Technologies Used**: Go, Postgres, Kubernetes
 - **Location**: `.koksmat/app`
 - **Responsibilities**:
-  - Building and managing APIs using the API builder developed for NDA staff
   - Handling business logic, data processing, and storage
-  - Issuing JWT tokens for secure API access
   - Ensuring data integrity and security
-
-### MagicPot - The Central API
-
-The MagicPot serves as the single entry point for all backend interactions, with strict access control:
-
-- **Anonymous Endpoint**:
-  - **Purpose**: Issue access tokens
-  - **Authentication**: Uses Microsoft Online to issue JWT tokens, valid for 10 minutes
 
 ### Getting Started with a New Project
 
@@ -65,6 +55,9 @@ To start a new project using the KOKSMAT framework, follow these steps:
        postLogoutRedirectUri: "/",
      };
      ```
+5. **Change name**
+
+- Search and replace "magicbutton/magic-master" with your repos name "owner/repo"
 
 ### Continuous Integration and Deployment with GitHub Actions
 
