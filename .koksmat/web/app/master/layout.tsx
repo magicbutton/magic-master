@@ -7,15 +7,15 @@ keep: false
 
 */
 import { useContext } from "react";
-import { AppProvider } from "./components/appcontextprovider";
-import AppLeftRail from "./components/appleftrail";
-import AppTopMenu from "./components/apptopmenu";
+import { AppProvider } from "@/components/appcontextprovider";
+import AppLeftRail from "@/components/appleftrail";
+import AppTopMenu from "@/components/apptopmenu";
 import { MagicboxContext } from "@/app/koksmat/magicbox-context";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Tracer from "@/app/koksmat/components/tracer";
 
-import { leftRailApps } from "./navigation";
+import { leftRailApps } from "../../components/navigation";
 export default function Layout(props: { children: any }) {
   const { children } = props;
   const magicbox = useContext(MagicboxContext);

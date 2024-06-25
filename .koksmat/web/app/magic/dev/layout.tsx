@@ -2,7 +2,6 @@ import path from "path";
 import { cwd } from "process";
 import fs from "fs";
 
-import { TestServicesNavigator } from "../components/testservicenavigator";
 import {
   Sheet,
   SheetContent,
@@ -76,7 +75,7 @@ export default function Layout(props: { children: any }) {
         {/* <div>{folderPath}</div> */}
         <div className="flex">
           <div className="hidden lg:block lg:w-1/4">
-            <LeafTree leafs={pagemap.leafs} appName="magic-people" />
+            <LeafTree leafs={pagemap.leafs} appName="magic-master" />
           </div>
           <div className="lg:hidden ">
             <Sheet>
@@ -84,7 +83,7 @@ export default function Layout(props: { children: any }) {
                 <MenuIcon />
               </SheetTrigger>
               <SheetContent side="left">
-                <LeafTree leafs={pagemap.leafs} appName="magic-people" />
+                <LeafTree leafs={pagemap.leafs} appName="magic-master" />
               </SheetContent>
             </Sheet>
           </div>

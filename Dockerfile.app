@@ -13,9 +13,9 @@ RUN go install github.com/koksmat-com/koksmat@v2.1.6.20
 RUN koksmat context init sharepoint
 WORKDIR /kitchens
 COPY ./.koksmat/kitchenroot .
-WORKDIR /kitchens/magic-people
+WORKDIR /kitchens/magic-master
 COPY . .  
-WORKDIR /kitchens/magic-people/.koksmat/app
+WORKDIR /kitchens/magic-master/.koksmat/app
 
 RUN go install
 

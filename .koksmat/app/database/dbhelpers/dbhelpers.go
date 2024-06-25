@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/magicbutton/magic-people/utils"
+	"github.com/magicbutton/magic-master/utils"
 )
 
 /**

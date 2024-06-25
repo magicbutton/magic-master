@@ -5,9 +5,9 @@
     "patch": 5,
     "major": 0
   },
-  "appname": "magic-people",
+  "appname": "magic-master",
   "dnsprod": "people.intra.nexigroup.com",
   "dnstest": "people-test.intra.nexigroup.com",
-  "imagename": "ghcr.io/magicbutton/magic-people",
+  "imagename": "ghcr.io/magicbutton/magic-master",
   "port": 4444
 }

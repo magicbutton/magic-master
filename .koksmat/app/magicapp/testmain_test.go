@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/magicbutton/magic-people/utils"
+	"github.com/magicbutton/magic-master/utils"
 )
 
 func TestMain(m *testing.M) {

@@ -3,8 +3,8 @@ package magicapp
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/magicbutton/magic-people/cmds"
-	"github.com/magicbutton/magic-people/utils"
+	"github.com/magicbutton/magic-master/cmds"
+	"github.com/magicbutton/magic-master/utils"
 )
 
 func RegisterCmds() {

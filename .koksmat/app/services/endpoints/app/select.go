@@ -14,7 +14,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/magicbutton/magic-people/utils"
+	"github.com/magicbutton/magic-master/utils"
 )
 
 type SelectResponse struct {
